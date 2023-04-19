@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+*{
+  font-family: 'Neucha', cursive;
+}
+
+.container{
+  background-color: rgb(54, 54, 136);
+  height: 100vh;
+  
+}
+
+header{
+  color:red;
+  text-align: center;
+  font-size: 40px;
+  border-bottom: 2px solid white;
+
+}
+
+// .todos{
+//   background-color: rgb(26, 19, 122);
+//   padding-top: 50px;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+// }
+
+.dragactive{
+  background-color: rgb(163, 0, 0);
+}
+.dragremove{
+  background-color: rgb(7, 118, 5);
+}

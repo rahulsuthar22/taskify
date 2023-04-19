@@ -1,0 +1,151 @@
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+@mixin sm {
+  @media(max-width: #{$screen-sm-min}) {
+    @content
+  }
+}
+
+@mixin md {
+  @media(max-width: #{$screen-md-min}) {
+    @content
+  }
+}
+
+
+@mixin lg {
+  @media(max-width: #{$screen-lg-min}) {
+    @content
+  }
+}
+
+@mixin xl {
+  @media(max-width: #{$screen-xl-min}) {
+    @content
+  }
+}
+
+.todos {
+  // background-color: rgb(26, 19, 122);
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include sm {
+    flex-direction: column;
+  }
+}
+
+.input-form {
+  width: 80%;
+  margin: 20px auto;
+  position: relative;
+}
+
+.todo-input {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 100%;
+  box-shadow: inset 0 0 5px black;
+  transition: 0.2s;
+
+  &:focus {
+    box-shadow: 0 0 10px 1000px rgb(0, 0, 0, 0.5)
+  }
+}
+
+.go-btn {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: brown;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 2px;
+  right: -18px;
+  color: white;
+  transition: .2s all;
+  box-shadow: 0 0 10px black;
+
+  &:hover {
+    background-color: #388ae2;
+  }
+
+  &:active {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px black;
+  }
+}
+
+.todoss {
+
+  font-size: 18px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.todos-container {
+  display: flex;
+  background-color: yellow;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: .1s all;
+  border: 2px solid transparent;
+  width: 40%;
+
+  @include sm {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    border: 2px solid black;
+  }
+}
+
+.activeTask {
+  background-color: rgb(221, 60, 60);
+  width:50%
+}
+
+.completedTask {
+  background-color: rgb(37, 221, 34);
+  width:50%
+
+}
+
+.more {
+  font-size: 20px;
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+
+  @include md {
+    width: 60px;
+  }
+
+}
+
+.more-btn {
+  cursor: pointer;
+}
+
+.tasks {
+  display: flex;
+}
+
+.task {
+  text-align: center;
+  border-bottom: 2px solid white;
+  padding: 10px 0;
+}
